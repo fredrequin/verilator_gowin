@@ -21,7 +21,7 @@ module OSER16
     input  D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15,
     output Q
 );
-    wire       _w_rst = (LSREN == "true") ? ~RESET : 1'b1;
+    wire       _w_rst = (LSREN == "true") ? RESET : 1'b0;
 
     reg        _r_rstn_cnt;
     reg  [2:0] _r_data_cnt;
